@@ -1,0 +1,51 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[M_VD_CMN_SCM_CUSTOMER_CRM](
+	[AGENT_LOC_DIV] [nvarchar](3) NULL,
+	[BF_Channel] [nvarchar](300) NULL,
+	[Customer_Grp1Name] [nvarchar](300) NULL,
+	[Customer_Grp2Name] [nvarchar](300) NULL,
+	[Customer_GrpCountry] [nvarchar](300) NULL,
+	[EMS] [varchar](300) NULL,
+	[HI_CORP_CD] [nvarchar](10) NULL,
+	[INTERNAL_FLG_NAME] [nvarchar](10) NULL,
+	[NIKKEI_WW_FLG] [nvarchar](300) NULL,
+	[PRICE_DIV] [nvarchar](2) NULL,
+	[RCP_AGENT_CD] [nvarchar](2) NULL,
+	[RCP_AGENT_SNAME] [nvarchar](60) NULL,
+	[RCP_DEPARTMENT_CD] [nvarchar](8) NULL,
+	[RCP_DEPARTMENT_SNAME] [nvarchar](60) NULL,
+	[RCP_DIVISION_CD] [nvarchar](6) NULL,
+	[RCP_DIVISION_SNAME] [nvarchar](60) NULL,
+	[RCP_RENESAS_GR_CD] [nvarchar](2) NULL,
+	[RCP_RENESAS_GR_SNAME] [nvarchar](60) NULL,
+	[RCP_SECTION_CD] [nvarchar](10) NULL,
+	[RCP_SECTION_SNAME] [nvarchar](60) NULL,
+	[RCP_UNIT_CD] [nvarchar](4) NULL,
+	[RCP_UNIT_SNAME] [nvarchar](60) NULL,
+	[REGION] [varchar](300) NULL,
+	[SALES_DEPARTMENT_SNAME] [nvarchar](60) NULL,
+	[SALEMAN] [varchar](300) NULL,
+	[Sales_Planning_Grp] [nvarchar](300) NULL,
+	[SCM_CUSTOMER_CD] [nvarchar](10) NULL,
+	[SCM_COUNTRY_CD] [nvarchar](3) NULL,
+	[SCM_CUSTOMER_SNAME] [nvarchar](20) NULL
+) ON [BI_DM_Dimension]
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+
+GO
+SET ANSI_PADDING ON
+
+GO
+CREATE CLUSTERED INDEX [I_M_VD_CMN_SCM_CUSTOMER_CRM_1] ON [dbo].[M_VD_CMN_SCM_CUSTOMER_CRM]
+(
+	[SCM_CUSTOMER_CD] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, DATA_COMPRESSION = PAGE) ON [BI_DM_Dimension]
+GO

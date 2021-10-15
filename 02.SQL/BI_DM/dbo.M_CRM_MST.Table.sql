@@ -1,0 +1,21 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[M_CRM_MST](
+	[CODE_ID] [char](4) NOT NULL,
+	[CODE_NAME] [nvarchar](255) NULL,
+	[CODE_VALUE] [numeric](18, 0) NOT NULL,
+	[VALUE_NAME] [nvarchar](255) NULL,
+	[SORT_NUM] [int] NULL,
+	[DELETE_FLG] [char](1) NOT NULL,
+	[LAST_MODIFIED_DATE] [datetime] NULL
+) ON [BI_DM_Fact_NonPartition]
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+
+GO

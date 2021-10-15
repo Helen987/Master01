@@ -1,0 +1,18 @@
+USE [BI_DW]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[R_DCP_RESOURCE](
+	[WBS] [nvarchar](30) NOT NULL,
+	[DELIBERATION_CD] [nvarchar](6) NOT NULL,
+	[CALENDAR_YM] [date] NOT NULL,
+	[DELIBERATION_FLAG] [int] NULL,
+	[DESIGN_CD] [nvarchar](25) NOT NULL,
+	[DEV_RESOURCE_ACT] [numeric](18, 2) NULL,
+	[DEV_RESOURCE_BUD] [numeric](18, 2) NULL,
+	[DCP_UPDATETIME] [smalldatetime] NULL
+) ON [BI_DW_Staging]
+
+GO

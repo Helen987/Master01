@@ -1,0 +1,34 @@
+USE [BI_DW]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[R_SFM_BCCV_ACCOUNT_VIEW](
+	[ACCOUNT_GROUP_CODE] [nvarchar](255) NULL,
+	[ACCOUNT_NAME] [nvarchar](255) NULL,
+	[ACCOUNT_CURRENCY] [nvarchar](3) NULL,
+	[WEBSITE] [nvarchar](255) NULL,
+	[ACCOUNT_GROUP1_NAME] [nvarchar](255) NULL,
+	[CANCEL_FLG] [nvarchar](1) NULL,
+	[CUSTOMER_SEGMENTATION] [nvarchar](2) NULL,
+	[REL_GROUP_FAE] [numeric](5, 1) NULL,
+	[REL_GROUP_INSIDE_SALES] [numeric](5, 1) NULL,
+	[REL_GROUP_MARKETING] [numeric](5, 1) NULL,
+	[REL_GROUP_OTHER] [numeric](5, 1) NULL,
+	[REL_GROUP_SALES] [numeric](5, 1) NULL,
+	[HEAD_COUNT_TOTAL] [numeric](18, 1) NULL,
+	[CHANNEL_FAE] [numeric](5, 1) NULL,
+	[CHANNEL_OTHER] [numeric](5, 1) NULL,
+	[CHANNEL_SALES] [numeric](5, 1) NULL,
+	[MAIN_REGION] [nvarchar](2) NULL,
+	[DEFAULT_STAGE_TYPE] [nvarchar](2) NULL,
+	[START_MONTH_OF_FISCAL_YEAR] [nvarchar](2) NULL,
+	[DUNS_NUMBER] [nvarchar](20) NULL,
+	[ACCOUNT_INDUSTRY] [nvarchar](2) NULL,
+	[CREATED_DATE] [date] NULL,
+	[LAST_MODIFIED_DATE] [date] NULL,
+	[IF_LAST_MODIFIED_DATE] [date] NULL
+) ON [BI_DW_Master]
+
+GO

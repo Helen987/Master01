@@ -1,0 +1,40 @@
+USE [BI_DW]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[R_RBW_TOGOTRADE_INV](
+	[CUSTOMERCD] [nvarchar](12) NULL,
+	[PARTNO] [nvarchar](40) NULL,
+	[APPLCAT3CD] [nvarchar](3) NULL,
+	[SALESAGENTCD] [nvarchar](12) NULL,
+	[DATAMONTH] [date] NULL,
+	[DATADATE] [date] NULL,
+	[RESULTDIV] [nvarchar](1) NULL,
+	[CURRENCYCD] [nvarchar](3) NULL,
+	[TODEMANDQTY] [decimal](20, 4) NULL,
+	[TODEMANDAMT] [money] NULL,
+	[TOREPLYQTY] [decimal](20, 4) NULL,
+	[TOREPLYAMT] [money] NULL,
+	[GODEMANDQTY] [decimal](20, 4) NULL,
+	[GODEMANDAMT] [money] NULL,
+	[GOREPLYQTY] [decimal](20, 4) NULL,
+	[GOREPLYAMT] [money] NULL,
+	[TOBACKLOGQTY] [decimal](20, 4) NULL,
+	[TOBACKLOGAMT] [money] NULL,
+	[GOBACKLOGQTY] [decimal](20, 4) NULL,
+	[GOBACKLOGAMT] [money] NULL,
+	[SOBACKLOGQTY] [decimal](20, 4) NULL,
+	[SOBACKLOGAMT] [money] NULL,
+	[COBACKLOGQTY] [decimal](20, 4) NULL,
+	[COBACKLOGAMT] [money] NULL,
+	[RELINVQTY] [decimal](20, 4) NULL,
+	[RELINVAMT] [money] NULL,
+	[RELSALESINVQTY] [decimal](20, 4) NULL,
+	[RELSALESINVAMT] [money] NULL,
+	[TRADEINVQTY] [decimal](20, 4) NULL,
+	[TRADEINVAMT] [money] NULL
+) ON [BI_DW_Staging]
+
+GO

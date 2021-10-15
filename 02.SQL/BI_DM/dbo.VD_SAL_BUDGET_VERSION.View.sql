@@ -1,0 +1,27 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE VIEW [dbo].[VD_SAL_BUDGET_VERSION] AS
+SELECT CAST([VERSION_RESULT]      AS NVARCHAR(1) ) AS [VERSION_RESULT]
+      ,CAST([VERSION_RESULT_NAME] AS NVARCHAR(20)) AS [VERSION_RESULT_NAME]
+  FROM
+(
+SELECT N'1' AS [VERSION_RESULT], N'1:First' AS [VERSION_RESULT_NAME]
+ UNION ALL
+SELECT N'2'                    , N'2:Second'
+ UNION ALL
+SELECT N'3'                    , N'3:Third'
+ UNION ALL
+SELECT N'D'                    , N'9:Daily'
+ UNION ALL
+SELECT N'L'                    , N'0:Latest'
+ UNION ALL
+SELECT N'O'                    , N'9:Original'
+) AS [A]
+;
+
+GO

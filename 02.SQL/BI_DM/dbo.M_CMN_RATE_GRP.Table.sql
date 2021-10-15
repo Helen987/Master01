@@ -1,0 +1,17 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[M_CMN_RATE_GRP](
+	[GRP_CD] [nvarchar](2) NOT NULL,
+	[10_DIV_GRP] [nvarchar](8) NULL,
+	[5_DIV_GRP] [nvarchar](8) NULL
+) ON [BI_DM_Fact_NonPartition]
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+
+GO

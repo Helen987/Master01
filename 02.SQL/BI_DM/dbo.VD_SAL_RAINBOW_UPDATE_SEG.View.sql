@@ -1,0 +1,17 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE VIEW [dbo].[VD_SAL_RAINBOW_UPDATE_SEG] 
+AS 
+SELECT DISTINCT [DATADATE]                                             AS UPDATE_DATE
+               ,CAST(CONVERT(NVARCHAR, DATADATE, 111) AS NVARCHAR(20)) AS [UPDATE_DATE_TEXT]
+               ,CAST(N'LatestDate' AS NVARCHAR(10))                    AS [LATEST_DATE_TYPE]
+  FROM [BI_DM].[dbo].[F_RBW_MTF_L];
+
+
+GO

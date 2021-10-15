@@ -1,0 +1,24 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE VIEW [dbo].[VD_CMN_APL_SEG]
+AS
+SELECT LEFT([BOOKING_PN_CD] + REPLICATE(' ', 18), 18) +  LEFT([SCM_CUSTOMER] + REPLICATE(' ', 10), 10)  AS [SEG_CD] 
+      ,[APL1]       AS [APL_1_CD]
+      ,[APL2]       AS [APL_2_CD]
+      ,[APL3]       AS [APL_3_CD]
+      ,[APL1_TXT]   AS [APL_1_NAME]
+      ,[APL2_TXT]   AS [APL_2_NAME]
+      ,[APL3_TXT]   AS [APL_3_NAME]
+      ,[AFFECT_GST] AS [GST_1_AFFECT]
+      ,[GST_1]      AS [GST_2]
+      ,[GST_2]      AS [GST_3]
+  FROM [dbo].[V_MST_BOOKPN_CUST_APL];
+
+
+GO

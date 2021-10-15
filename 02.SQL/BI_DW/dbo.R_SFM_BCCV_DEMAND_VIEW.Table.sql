@@ -1,0 +1,44 @@
+USE [BI_DW]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[R_SFM_BCCV_DEMAND_VIEW](
+	[OPPORTUNITY_SEQ] [nvarchar](13) NOT NULL,
+	[OPPORTUNITY_NO] [nvarchar](7) NULL,
+	[PRODUCT_SEQ] [nvarchar](2) NULL,
+	[PARTIAL_AWARD_SEQ] [nvarchar](2) NULL,
+	[YEAR] [numeric](4, 0) NULL,
+	[MONTH] [numeric](2, 0) NULL,
+	[QUANTITY_1PIECE] [numeric](18, 0) NULL,
+	[PRICE] [numeric](18, 4) NULL,
+	[AMOUNT] [numeric](18, 0) NULL,
+	[S2_QUANTITY] [numeric](18, 0) NULL,
+	[S1_QUANTITY] [numeric](18, 0) NULL,
+	[S0_QUANTITY] [numeric](18, 0) NULL,
+	[S2_AMOUNT] [numeric](18, 0) NULL,
+	[S1_AMOUNT] [numeric](18, 0) NULL,
+	[S0_AMOUNT] [numeric](18, 0) NULL,
+	[NOMINATION_REMAINING_QUANTITY] [numeric](18, 0) NULL,
+	[NOMINATION_REMAINING_AMOUNT] [numeric](18, 0) NULL,
+	[PARENT_TYPE] [nvarchar](2) NULL,
+	[DELETE_FLAG] [nvarchar](1) NULL,
+	[CREATED_BY_FEDERATION_ID] [nvarchar](4000) NULL,
+	[CREATED_BY_EMAIL] [nvarchar](128) NULL,
+	[CREATED_DATE] [date] NULL,
+	[LAST_MODIFIED_BY_FEDERATION_ID] [nvarchar](4000) NULL,
+	[LAST_MODIFIED_BY_EMAIL] [nvarchar](128) NULL,
+	[LAST_MODIFIED_DATE] [date] NULL,
+	[IF_LAST_MODIFIED_DATE] [date] NULL,
+	[GP_AMOUNT] [numeric](18, 0) NULL,
+	[GP_AMOUNT_GO] [numeric](18, 0) NULL,
+	[GO_PRICE] [numeric](18, 4) NULL,
+	[GO_AMOUNT] [numeric](18, 4) NULL
+) ON [BI_DW_Staging]
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+
+GO

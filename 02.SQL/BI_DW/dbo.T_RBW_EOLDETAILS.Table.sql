@@ -1,0 +1,17 @@
+USE [BI_DW]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[T_RBW_EOLDETAILS](
+	[CUSTOMERCD] [nvarchar](10) NULL,
+	[PARTNO] [nvarchar](40) NULL,
+	[SFSEQNO] [decimal](18, 0) NULL,
+	[EOLQTY] [decimal](18, 4) NULL,
+	[USERID] [nvarchar](10) NULL,
+	[USERNAME] [nvarchar](40) NULL,
+	[LASTUPDATEDATE] [datetime] NULL
+) ON [BI_DW_Staging]
+
+GO

@@ -1,0 +1,35 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE VIEW [dbo].[VF_SAL_SHIPPING] AS
+SELECT [SCM_CUSTOMER_CD]
+      ,[ORDER_PART_NO_CD]
+      ,[SEG_CD]
+      ,[CURRENCY]
+      ,'JPY' AS [CURRENCY_EXCH]
+      ,[RECORD_DATE]
+      ,[ORDER_DATE]
+      ,[CARRY_DATE]
+      ,[TO_AMT_JPY] AS [TO_AMT]
+      ,[TO_QTY]
+  FROM [BI_DM].[dbo].[T_SAL_SHIPPING]
+UNION ALL
+ SELECT [SCM_CUSTOMER_CD]
+      ,[ORDER_PART_NO_CD]
+      ,[SEG_CD]
+      ,[CURRENCY]
+      ,'Input Currency' AS [CURRENCY_EXCH]
+      ,[RECORD_DATE]
+      ,[ORDER_DATE]
+      ,[CARRY_DATE]
+      ,[TO_AMT_NET] AS [TO_AMT]
+      ,[TO_QTY]
+  FROM [BI_DM].[dbo].[T_SAL_SHIPPING]
+
+
+GO

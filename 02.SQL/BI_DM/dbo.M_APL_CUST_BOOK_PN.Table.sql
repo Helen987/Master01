@@ -1,0 +1,61 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[M_APL_CUST_BOOK_PN](
+	[BOOKING_PN] [nvarchar](40) NOT NULL,
+	[BOOKING_PN_CD] [nvarchar](18) NULL,
+	[SCM_CUSTOMER] [nvarchar](10) NOT NULL,
+	[APL1] [nvarchar](1) NULL,
+	[APL1_TXT] [nvarchar](40) NULL,
+	[APL2] [nvarchar](2) NULL,
+	[APL2_TXT] [nvarchar](40) NULL,
+	[APL3] [nvarchar](3) NULL,
+	[APL3_TXT] [nvarchar](40) NULL,
+	[RR_BU_BUSINESS_SITE_TXT] [nvarchar](300) NULL,
+	[RR_BU_UNIT_TXT] [nvarchar](300) NULL,
+	[RR_BU_DIVISION_TXT] [nvarchar](300) NULL,
+	[RR_BU_DEPARTMENT_TXT] [nvarchar](300) NULL,
+	[RR_BU_SECTION_TXT] [nvarchar](300) NULL,
+	[SEGMENT_BU] [nvarchar](300) NULL,
+	[FREE_ITEM_01] [nvarchar](300) NULL,
+	[FREE_ITEM_02] [nvarchar](300) NULL,
+	[AFFECT_GST] [nvarchar](300) NULL,
+	[GST_1] [nvarchar](300) NULL,
+	[GST_2] [nvarchar](300) NULL,
+	[APL_FREE_ITEM01] [nvarchar](300) NULL,
+	[APL_FREE_ITEM02] [nvarchar](300) NULL,
+	[APL_FREE_ITEM03] [nvarchar](300) NULL,
+	[APL_FREE_ITEM04] [nvarchar](300) NULL,
+	[APL_FREE_ITEM05] [nvarchar](300) NULL,
+	[INS_DATE] [nvarchar](8) NULL,
+	[INS_TIME] [nvarchar](6) NULL,
+	[UPD_DATE] [nvarchar](8) NULL,
+	[UPD_TIME] [nvarchar](6) NULL,
+	[FIXED_APL1] [nvarchar](1) NULL,
+	[FIXED_APL1_TXT] [nvarchar](40) NULL,
+	[FIXED_APL2] [nvarchar](2) NULL,
+	[FIXED_APL2_TXT] [nvarchar](40) NULL,
+	[FIXED_APL3] [nvarchar](3) NULL,
+	[FIXED_APL3_TXT] [nvarchar](40) NULL,
+	[LATEST_APL_REVENUE_BU_BUSI] [nvarchar](300) NULL,
+	[LATEST_APL_REVENUE_BU_UNIT] [nvarchar](300) NULL,
+	[LATEST_APL_REVENUE_BU_DIVI] [nvarchar](300) NULL,
+	[LATEST_APL_REVENUE_BU_DEPA] [nvarchar](300) NULL,
+	[LATEST_APL_REVENUE_BU_SECT] [nvarchar](300) NULL,
+	[FIXED_APL_SEGMENT] [nvarchar](300) NULL,
+	[FIXED_APL_SUB_SEGMENT] [nvarchar](300) NULL,
+	[FIXED_APL_INVEST_LABEL] [nvarchar](300) NULL,
+	[LATEST_APL_SEGMENT] [nvarchar](300) NULL,
+	[LATEST_APL_SUB_SEGMENT] [nvarchar](300) NULL,
+	[LATEST_APL_INVEST_LABEL] [nvarchar](300) NULL,
+ CONSTRAINT [PK_M_APL_CUST_BOOK_PN] PRIMARY KEY CLUSTERED 
+(
+	[BOOKING_PN] ASC,
+	[SCM_CUSTOMER] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, DATA_COMPRESSION = PAGE) ON [BI_DM_Dimension]
+) ON [BI_DM_Dimension]
+
+GO

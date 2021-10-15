@@ -1,0 +1,15 @@
+USE [BI_DW]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Z_WEB_LINK](
+	[CONTENT] [nvarchar](256) NULL,
+	[LINKURL] [nvarchar](256) NULL,
+	[UPDATE_DATE] [date] NULL,
+	[DORDER] [int] NULL,
+	[PUBFLG] [nvarchar](1) NULL
+) ON [BI_DW_Master]
+
+GO

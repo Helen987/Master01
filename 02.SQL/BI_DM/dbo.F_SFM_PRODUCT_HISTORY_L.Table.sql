@@ -1,0 +1,39 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[F_SFM_PRODUCT_HISTORY_L](
+	[PRODUCT_HISTORY_NO] [nvarchar](13) NOT NULL,
+	[OPPORTUNITY_SEQ] [nvarchar](13) NULL,
+	[OPPORTUNITY_NO] [nvarchar](7) NULL,
+	[PRODUCT_SEQ] [nvarchar](2) NULL,
+	[PARTIAL_AWARD_SEQ] [nvarchar](2) NULL,
+	[ACTUAL_TYPE] [nvarchar](2) NULL,
+	[AMOUNT_DIFFERENCE] [numeric](38, 4) NULL,
+	[AMOUNT] [numeric](38, 4) NULL,
+	[D_IN_DATE] [date] NULL,
+	[EVENT_TYPE] [nvarchar](2) NULL,
+	[QUANTITY_DIFFERENCE] [numeric](18, 0) NULL,
+	[QUANTITY] [numeric](18, 0) NULL,
+	[STAGE_TYPE] [nvarchar](2) NULL,
+	[CURRENCY_ISO_CODE] [nvarchar](3) NULL,
+	[CURRENCY_TYPE] [nvarchar](14) NULL,
+	[DELETE_FLAG] [nvarchar](1) NULL,
+	[CREATED_DATE] [date] NULL,
+	[LAST_MODIFIED_DATE] [date] NULL,
+	[IF_LAST_MODIFIED_DATE] [date] NULL,
+	[UPDATE_DATE] [date] NULL,
+	[D_IN_SCM_CUST_CODE_FOR_MTF] [nvarchar](10) NULL,
+	[SALES_ORDER_PN_FOR_MTF] [nvarchar](18) NULL,
+	[APPLICATION1_CODE] [nvarchar](1) NULL,
+	[APPLICATION2_CODE] [nvarchar](2) NULL,
+	[APPLICATION3_CODE] [nvarchar](3) NULL
+) ON [PS_PartitionByMonth_DM]([UPDATE_DATE])
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+
+GO

@@ -1,0 +1,17 @@
+USE [BI_DM]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[F_SAL_CUSTGRP1_RANK](
+	[CALENDAR_YM] [nvarchar](7) NULL,
+	[CUSTOMER_GRP1] [nvarchar](300) NULL,
+	[Rank_No] [decimal](10, 0) NULL
+) ON [BI_DM_Fact_NonPartition]
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+
+GO

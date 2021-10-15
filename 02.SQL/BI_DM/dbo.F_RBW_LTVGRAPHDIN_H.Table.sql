@@ -1,0 +1,58 @@
+USE [BI_DM]
+GO
+/****** Object:  Table [dbo].[F_RBW_LTVGRAPHDIN_H]    Script Date: 2017/02/27 11:19:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[F_RBW_LTVGRAPHDIN_H](
+	[OPPORTUNITY_SEQ] [nvarchar](13) NULL,
+	[OPPORTUNITY_NO] [nvarchar](7) NULL,
+	[OPPORTUNITY_SEQ_PRD] [nvarchar](10) NULL,
+	[STAGE] [nvarchar](2) NULL,
+	[D_IN_SCM_CUST_CODE_FOR_MTF] [nvarchar](10) NULL,
+	[D_IN_SCM_CUST_CODE_FOR_SCM_OPE] [nvarchar](10) NULL,
+	[B_WIN_SCM_CUSTOMER_CODE] [nvarchar](10) NULL,
+	[SALES_ORDER_PN_FOR_MTF] [nvarchar](18) NULL,
+	[SALES_ORDER_PN_FOR_SCM_OPE] [nvarchar](18) NULL,
+	[OPP_APPLICATION3_CODE] [nvarchar](3) NULL,
+	[PRD_APPLICATION3_CODE] [nvarchar](3) NULL,
+	[CHANNEL_PARTNER_CODE] [nvarchar](40) NULL,
+	[CHANNEL_PARTNER_NAME] [nvarchar](255) NULL,
+	[STATUS] [nvarchar](2) NULL,
+	[TARGET_NOMINATION_DATE] [nvarchar](7) NULL,
+	[TARGET_AWARD_DATE] [nvarchar](7) NULL,
+	[APPROVED_DATE] [date] NULL,
+	[D_IN_CONFIDENCE_LEVEL_PERCENT] [nvarchar](4) NULL,
+	[QTY_UNIT] [numeric](18, 0) NULL,
+	[SHARE_PERCENT] [numeric](3, 0) NULL,
+	[START_MONTH_OF_FISCAL_YEAR] [nvarchar](2) NULL,
+	[MP_START_MONTH] [nvarchar](7) NULL,
+	[ACCOUNT_GROUP_CODE] [nvarchar](255) NULL,
+	[ACCOUNT_NAME] [nvarchar](255) NULL,
+	[CURRENCY] [nvarchar](3) NULL,
+	[CURRENCY_TYPE] [nvarchar](14) NULL,
+	[KCOMPANYG2CD] [nvarchar](300) NULL,
+	[KSALESAGENTCD] [nvarchar](12) NULL,
+	[KCUSTOMERCD] [nvarchar](12) NULL,
+	[BASEPN] [nvarchar](30) NULL,
+	[S1DATE] [date] NULL,
+	[CALENDAR_YM] [date] NULL,
+	[LTVAMT] [numeric](18, 4) NULL,
+	[BILLAMT] [numeric](18, 4) NULL,
+	[ALLOCBILLAMT] [numeric](18, 4) NULL,
+	[ALLOCSFAMT] [numeric](18, 4) NULL,
+	[BILLAMTBEYONDLTV] [numeric](18, 4) NULL,
+	[SFAMTBEYONDLTV] [numeric](18, 4) NULL,
+	[UPDATE_DATE] [date] NULL,
+	[DISP_UPDATE_DATE] [nvarchar](10) NULL,
+	[LATEST_FLG] [nvarchar](1) NULL,
+	[TARGET_NOMINATION_DATE_D] [date] NULL,
+	[TARGET_AWARD_DATE_D] [date] NULL,
+	[MP_START_DATE] [date] NULL
+) ON [PS_PartitionByMonth_DM]([CALENDAR_YM])
+WITH
+(
+DATA_COMPRESSION = PAGE
+)
+GO
