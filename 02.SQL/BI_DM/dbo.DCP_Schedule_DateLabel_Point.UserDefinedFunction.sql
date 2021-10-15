@@ -1,3 +1,4 @@
+--Oct 15,2021 Helen changed
 USE [BI_DM]
 GO
 SET ANSI_NULLS ON
